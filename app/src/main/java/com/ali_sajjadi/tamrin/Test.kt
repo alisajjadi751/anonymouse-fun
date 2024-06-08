@@ -13,20 +13,13 @@ class Test private constructor() {
 
     }
 
-    fun showLog() {
+    fun showLog(){
 
-        val address = "test test2 test3 test4"
-
-        Log.i("TESTING", "")
-        address getWords "Ali"
+        Log.i("TESTING",getDate("Miladi"))
     }
 
-    //اگر extension fun  داشته باشیم میتوان ان را به صورت infix fun تعریف کرد
-    //فانکشنی که به صورت infix fun باشد حتما باید دارای فقط یک ورودی باشد
-    private infix fun String.getWords(name: String): Int {
+    //Anonymous fun
+    val getDate = fun(time: String) ="2024/08/05 $time"
 
-        return this.split(' ').size
-
-    }
 
 }
